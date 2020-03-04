@@ -2,9 +2,11 @@
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot, on sidebar not show the channel switcher 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -87,7 +89,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -113,21 +114,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -140,7 +141,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -166,21 +166,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -193,7 +193,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -219,21 +218,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -273,9 +272,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot, on sidebar show 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -358,7 +359,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -384,21 +384,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -411,7 +411,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -437,21 +436,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -464,7 +463,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -490,21 +488,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -544,9 +542,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot, on sidebar show with favorites 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -629,7 +629,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -655,21 +654,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -682,7 +681,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -708,21 +706,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -735,7 +733,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -761,21 +758,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -815,9 +812,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot, on sidebar show with unreads 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -900,7 +899,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -926,21 +924,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -953,7 +951,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -979,21 +976,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1006,7 +1003,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1032,21 +1028,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1090,9 +1086,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should match snapshot,
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide correctly more channels modal 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -1179,7 +1177,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1205,21 +1202,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1232,7 +1229,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1258,21 +1254,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1285,7 +1281,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1311,21 +1306,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1365,9 +1360,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide correctly more channels modal 2`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -1450,7 +1447,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1476,21 +1472,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1503,7 +1499,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1529,21 +1524,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1556,7 +1551,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1582,21 +1576,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1636,9 +1630,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide correctly more direct channels modal 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -1725,7 +1721,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1751,21 +1746,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1778,7 +1773,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1804,21 +1798,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1831,7 +1825,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -1857,21 +1850,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -1911,9 +1904,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide correctly more direct channels modal 2`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -1996,7 +1991,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2022,21 +2016,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2049,7 +2043,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2075,21 +2068,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2102,7 +2095,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2128,21 +2120,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2182,9 +2174,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide correctly new channel modal 1`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -2267,7 +2261,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2293,21 +2286,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2320,7 +2313,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2346,21 +2338,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2373,7 +2365,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2399,21 +2390,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2453,9 +2444,11 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
 
 exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide correctly new channel modal 2`] = `
 <div
+  aria-labelledby="sidebar-left"
   className="sidebar--left"
   id="sidebar-left"
   key="sidebar-left"
+  role="navigation"
 >
   <Connect(NewChannelFlow)
     canCreatePrivateChannel={true}
@@ -2538,7 +2531,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="publicChannelList"
           key="public"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2564,21 +2556,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="public"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={true}
             channelId="c1"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c1"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c2"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c2"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2591,7 +2583,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="privateChannelList"
           key="private"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2617,21 +2608,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="private"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c3"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c3"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c4"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c4"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}
@@ -2644,7 +2635,6 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
           className="nav nav-pills nav-stacked a11y__section"
           id="directChannelList"
           key="direct"
-          role="presentation"
           tabIndex="-1"
         >
           <li
@@ -2670,21 +2660,21 @@ exports[`component/sidebar/sidebar_channel/SidebarChannel should show/hide corre
               sectionType="direct"
             />
           </li>
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c5"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c5"
           />
-          <Connect(SidebarChannel)
+          <Connect(injectIntl(SidebarChannel))
             active={false}
             channelId="c6"
             currentTeamName="test-team"
             currentUserId="my-user-id"
             key="c6"
           />
-          <ChannelMore
+          <injectIntl(ChannelMore)
             browsePublicDirectChannels={[Function]}
             currentTeamId="team_id"
             moreChannels={[Function]}

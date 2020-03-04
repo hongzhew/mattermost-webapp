@@ -19,7 +19,7 @@ import {
     getIsSearchingPinnedPost,
     getIsSearchGettingMore,
 } from 'selectors/rhs';
-import {Preferences} from 'utils/constants';
+import {Preferences} from 'utils/constants.jsx';
 
 import SearchResults from './search_results.jsx';
 

@@ -23,11 +23,13 @@ function renderUsername(value) {
     return renderFormattedText(username, options);
 }
 
-function renderFormattedText(value, options) {
+function renderFormattedText(value, options, post) {
     return (
         <Markdown
             message={value}
             options={options}
+            postId={post && post.id}
+            postType={post && post.type}
         />
     );
 }
@@ -179,8 +181,8 @@ function renderHeaderChangeMessage(post) {
     };
 
     const username = renderUsername(post.props.username);
-    const oldHeader = post.props.old_header ? renderFormattedText(post.props.old_header, headerOptions) : null;
-    const newHeader = post.props.new_header ? renderFormattedText(post.props.new_header, headerOptions) : null;
+    const oldHeader = post.props.old_header ? renderFormattedText(post.props.old_header, headerOptions, post) : null;
+    const newHeader = post.props.new_header ? renderFormattedText(post.props.new_header, headerOptions, post) : null;
 
     if (post.props.new_header) {
         if (post.props.old_header) {
@@ -329,6 +331,22 @@ function renderChannelDeletedMessage(post) {
     );
 }
 
+function renderChannelUnarchivedMessage(post) {
+    if (!post.props.username) {
+        return null;
+    }
+
+    const username = renderUsername(post.props.username);
+
+    return (
+        <FormattedMessage
+            id='api.channel.restore_channel.unarchived'
+            defaultMessage='{username} has unarchived the channel.'
+            values={{username}}
+        />
+    );
+}
+
 function renderMeMessage(post) {
     return renderFormattedText((post.props && post.props.message) ? post.props.message : post.message);
 }
@@ -349,6 +367,7 @@ const systemMessageRenderers = {
     [Posts.POST_TYPES.CONVERT_CHANNEL]: renderConvertChannelToPrivateMessage,
     [Posts.POST_TYPES.PURPOSE_CHANGE]: renderPurposeChangeMessage,
     [Posts.POST_TYPES.CHANNEL_DELETED]: renderChannelDeletedMessage,
+    [Posts.POST_TYPES.CHANNEL_UNARCHIVED]: renderChannelUnarchivedMessage,
     [Posts.POST_TYPES.ME]: renderMeMessage,
 };
 

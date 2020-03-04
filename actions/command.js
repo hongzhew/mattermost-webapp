@@ -16,7 +16,7 @@ import * as PostActions from 'actions/post_actions.jsx';
 
 import {isUrlSafe, getSiteURL} from 'utils/url';
 import {localizeMessage, getUserIdFromChannelName} from 'utils/utils.jsx';
-import * as UserAgent from 'utils/user_agent.jsx';
+import * as UserAgent from 'utils/user_agent';
 import {Constants, ModalIdentifiers} from 'utils/constants';
 import {browserHistory} from 'utils/browser_history';
 
@@ -57,7 +57,8 @@ export function executeCommand(message, args) {
             if (channel.type === Constants.PRIVATE_CHANNEL) {
                 GlobalActions.showLeavePrivateChannelModal(channel);
                 return {data: true};
-            } else if (
+            }
+            if (
                 channel.type === Constants.DM_CHANNEL ||
                 channel.type === Constants.GM_CHANNEL
             ) {
@@ -86,7 +87,7 @@ export function executeCommand(message, args) {
             break;
         }
         case '/settings':
-            dispatch(openModal({ModalId: ModalIdentifiers.USER_SETTINGS, dialogType: UserSettingsModal}));
+            dispatch(openModal({modalId: ModalIdentifiers.USER_SETTINGS, dialogType: UserSettingsModal}));
             return {data: true};
         case '/collapse':
         case '/expand':

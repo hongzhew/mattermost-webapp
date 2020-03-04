@@ -9,6 +9,8 @@ import {FormattedMessage} from 'react-intl';
 import FormattedMarkdownMessage from 'components/formatted_markdown_message';
 import MattermostLogo from 'components/widgets/icons/mattermost_logo';
 
+import {AboutLinks} from 'utils/constants';
+
 export default class AboutBuildModal extends React.PureComponent {
     static defaultProps = {
         show: false,
@@ -138,37 +140,33 @@ export default class AboutBuildModal extends React.PureComponent {
             }
         }
 
-        let termsOfService;
-        if (config.TermsOfServiceLink) {
-            termsOfService = (
-                <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    href={config.TermsOfServiceLink}
-                >
-                    <FormattedMessage
-                        id='about.tos'
-                        defaultMessage='Terms of Service'
-                    />
-                </a>
-            );
-        }
+        const termsOfService = (
+            <a
+                target='_blank'
+                id='tosLink'
+                rel='noopener noreferrer'
+                href={AboutLinks.TERMS_OF_SERVICE}
+            >
+                <FormattedMessage
+                    id='about.tos'
+                    defaultMessage='Terms of Service'
+                />
+            </a>
+        );
 
-        let privacyPolicy;
-        if (config.PrivacyPolicyLink) {
-            privacyPolicy = (
-                <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    href={config.PrivacyPolicyLink}
-                >
-                    <FormattedMessage
-                        id='about.privacy'
-                        defaultMessage='Privacy Policy'
-                    />
-                </a>
-            );
-        }
+        const privacyPolicy = (
+            <a
+                target='_blank'
+                id='privacyLink'
+                rel='noopener noreferrer'
+                href={AboutLinks.PRIVACY_POLICY}
+            >
+                <FormattedMessage
+                    id='about.privacy'
+                    defaultMessage='Privacy Policy'
+                />
+            </a>
+        );
 
         let tosPrivacyHyphen;
         if (config.TermsOfServiceLink && config.PrivacyPolicyLink) {
@@ -226,7 +224,7 @@ export default class AboutBuildModal extends React.PureComponent {
                         </div>
                         <div>
                             <h3 className='about-modal__title'>{'Mattermost'} {title}</h3>
-                            <p className='about-modal__subtitle padding-bottom'>{subTitle}</p>
+                            <p className='about-modal__subtitle pb-2'>{subTitle}</p>
                             <div className='form-group less'>
                                 <div>
                                     <FormattedMessage
@@ -273,7 +271,7 @@ export default class AboutBuildModal extends React.PureComponent {
                             </div>
                         </div>
                     </div>
-                    <div className='about-modal__notice form-group padding-top x2'>
+                    <div className='about-modal__notice form-group pt-3'>
                         <p>
                             <FormattedMarkdownMessage
                                 id='about.notice'
